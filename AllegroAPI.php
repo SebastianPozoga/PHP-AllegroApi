@@ -20,11 +20,16 @@ class AllegroApi {
 		//prevents
 		if(!is_object($config))
 			throw new AllegroApiException("Allow only stdObject as parameter", AllegroApiException::ALLOW_ONLY_OBJECT);
-		if(!$config->login) throw new AllegroApiException("Must set login for Allegro API serwer", AllegroApiException::PARAMETER_INCORECT);
-		if(!$config->password) throw new AllegroApiException("Must set password for Allegro API serwer", AllegroApiException::PARAMETER_INCORECT);
-		if(!$config->apikey) throw new AllegroApiException("Must set apikey for Allegro API serwer", AllegroApiException::PARAMETER_INCORECT);
-		if(!isset($config->sandbox)) throw new AllegroApiException("Must set sandbox flag for Allegro API serwer", AllegroApiException::PARAMETER_INCORECT);
-		if(!$config->countryCode) throw new AllegroApiException("Must set countryCode for Allegro API serwer", AllegroApiException::PARAMETER_INCORECT);
+		if(!$config->password && !$config->hashPassword )
+			throw new AllegroApiException("Must set password for Allegro API serwer", AllegroApiException::PARAMETER_INCORECT);
+		if(!$config->login)
+			throw new AllegroApiException("Must set login for Allegro API serwer", AllegroApiException::PARAMETER_INCORECT);
+		if(!$config->apikey)
+			throw new AllegroApiException("Must set apikey for Allegro API serwer", AllegroApiException::PARAMETER_INCORECT);
+		if(!isset($config->sandbox))
+			throw new AllegroApiException("Must set sandbox flag for Allegro API serwer", AllegroApiException::PARAMETER_INCORECT);
+		if(!$config->countryCode)
+			throw new AllegroApiException("Must set countryCode for Allegro API serwer", AllegroApiException::PARAMETER_INCORECT);
 
 		//save data
 		$this->config = $config;
@@ -38,12 +43,12 @@ class AllegroApi {
 		));
 
 		//create request id data
-		$this->request = [
+		$this->request = array(
 			'countryId' => $config->countryCode, //for old function - example: doGetShipmentData
 			'countryCode' => $config->countryCode, //for new function
 			'webapiKey' => $config->apikey,
 			'localVersion' => $this->loadVersionKey($config->countryCode)
-		];
+		);
 	}
 
 	/**
@@ -97,7 +102,7 @@ class AllegroApi {
 
 	function __call($name, $arguments) {
 		//prepare data
-		$params = isset($arguments[0]) ? (array)$arguments[0] : [];
+		$params = isset($arguments[0]) ? (array)$arguments[0] : array();
 		$request = $this->buildRequest($params);
 
 		//add 'do' to short function name
