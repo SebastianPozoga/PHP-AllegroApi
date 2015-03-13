@@ -2,7 +2,7 @@
 
 namespace Tests;
 
-require "../AllegroAPI.php";
+require "../src/AllegroAPI.php";
 require "ConfigDistributor.php";
 
 use Tests\ConfigDistributor;

@@ -1,0 +1,10 @@
+{
+    "name": "spozoga/php-allegro-api",
+    "authors": [
+        {
+            "name": "Sebastian Pożoga",
+            "email": "sebastian@pozoga.eu"
+        }
+    ],
+    "require": {}
+}

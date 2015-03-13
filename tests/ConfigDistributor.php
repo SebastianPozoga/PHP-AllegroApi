@@ -9,7 +9,7 @@ class ConfigDistributor {
     private $config = null;
 
     function __construct() {
-        $configPath = dirname(__FILE__).'/../Config/config.ini';
+        $configPath = dirname(__FILE__).'/../config/config.ini';
         $data = parse_ini_file($configPath);
 
         if($data==null)
