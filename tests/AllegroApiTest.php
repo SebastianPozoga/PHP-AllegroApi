@@ -1,7 +1,7 @@
 <?php
 namespace Tests;
 
-require __DIR__ . "/../src/AllegroAPI.php";
+require __DIR__ . "/../src/AllegroApi/AllegroApi.php";
 require "ConfigDistributor.php";
 
 use AllegroApi\AllegroApi;

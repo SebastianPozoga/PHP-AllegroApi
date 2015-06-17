@@ -2,7 +2,7 @@
 
 namespace AllegroApi;
 
-require "AllegroAPIException.php";
+require_once "AllegroApiException.php";
 
 class AllegroApi {
 
