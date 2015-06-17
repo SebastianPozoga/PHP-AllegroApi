@@ -48,5 +48,25 @@ The api use _call to maping functions names to allegro request. You should use s
 #Allegro functions documentation
 Description of all allegro functions are available on http://allegro.pl/webapi/documentation.php
 
+# Quick start
+
+Clone empty project:
+~~~bash
+git clone https://github.com/SebastianPozoga/PHP-AllegroApi-EmptyProject.git
+composer install
+~~~
+
+And run:
+~~~
+php index.php
+~~~
+
+# Tests
+
+Run tests by:
+~~~
+phpunit tests/AllegroApiTest
+~~~
+
 # Older version
 It is strong recomended to use new version of PHP Allegro Api Library. If you must use old version is available on https://github.com/SebastianPozoga/Allegro-PHP-API-14
