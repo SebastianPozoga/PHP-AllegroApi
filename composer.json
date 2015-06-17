@@ -1,10 +1,12 @@
 {
     "name": "spozoga/php-allegro-api",
+    "description": "A newest library to communicate with Allegro Api. The library is OOP, good tested and easy to use. Make your job enjoyable. The version is tested with PHP5.5",
     "authors": [
         {
             "name": "Sebastian Pożoga",
             "email": "sebastian@pozoga.eu"
         }
     ],
+    "minimum-stability": "dev",
     "require": {}
 }
