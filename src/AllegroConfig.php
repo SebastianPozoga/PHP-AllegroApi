@@ -9,6 +9,7 @@ class AllegroConfig {
 	public $login = null;
 	public $apikey = null;
 	public $countryCode = null;
+	public $sandbox = null;
 
 
 	function __construct(array $config) {
@@ -17,6 +18,7 @@ class AllegroConfig {
 		$this->login = $config['login'];
 		$this->apikey = $config['apikey'];
 		$this->countryCode = $config['countryCode'];
+		$this->sandbox = $config['sandbox'];
 	}
 
 }
