@@ -18,19 +18,19 @@ class ConfigDistributor {
 		$this->config = json_decode(json_encode($data), FALSE);
 
 		if (!$this->config->login) {
-			throw new \Exception("Must set login for Allegro API serwer");
+			throw new \Exception("Must set login for Allegro API server");
 		}
 		if (!$this->config->password) {
-			throw new \Exception("Must set password for Allegro API serwer");
+			throw new \Exception("Must set password for Allegro API server");
 		}
 		if (!$this->config->apikey) {
-			throw new \Exception("Must set apikey for Allegro API serwer");
+			throw new \Exception("Must set apikey for Allegro API server");
 		}
 		if (!isset($this->config->sandbox)) {
-			throw new \Exception("Must set sandbox flag for Allegro API serwer");
+			throw new \Exception("Must set sandbox flag for Allegro API server");
 		}
 		if (!$this->config->countryCode) {
-			throw new \Exception("Must set countryCode for Allegro API serwer");
+			throw new \Exception("Must set countryCode for Allegro API server");
 		}
 	}
 

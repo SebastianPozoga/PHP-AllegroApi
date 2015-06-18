@@ -25,27 +25,27 @@ class AllegroApi {
 		}
 		if (!$config->password && !$config->hashPassword) {
 			throw new AllegroApiException(
-				"Must set password for Allegro API serwer", AllegroApiException::PARAMETER_INCORECT
+				"Must set password for Allegro API server", AllegroApiException::PARAMETER_INCORECT
 			);
 		}
 		if (!$config->login) {
 			throw new AllegroApiException(
-				"Must set login for Allegro API serwer", AllegroApiException::PARAMETER_INCORECT
+				"Must set login for Allegro API server", AllegroApiException::PARAMETER_INCORECT
 			);
 		}
 		if (!$config->apikey) {
 			throw new AllegroApiException(
-				"Must set apikey for Allegro API serwer", AllegroApiException::PARAMETER_INCORECT
+				"Must set apikey for Allegro API server", AllegroApiException::PARAMETER_INCORECT
 			);
 		}
 		if (!isset($config->sandbox)) {
 			throw new AllegroApiException(
-				"Must set sandbox flag for Allegro API serwer", AllegroApiException::PARAMETER_INCORECT
+				"Must set sandbox flag for Allegro API server", AllegroApiException::PARAMETER_INCORECT
 			);
 		}
 		if (!$config->countryCode) {
 			throw new AllegroApiException(
-				"Must set countryCode for Allegro API serwer", AllegroApiException::PARAMETER_INCORECT
+				"Must set countryCode for Allegro API server", AllegroApiException::PARAMETER_INCORECT
 			);
 		}
 
